@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="checkout_cart_item_renderers"/>
+    <body>
+        <referenceContainer name="page.messages">
+            <block class="Magento\Checkout\Block\Cart\ValidationMessages" name="checkout.cart.validationmessages"/>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block name="free.item" class="Syedzaidi\FreeItem\Block\FreeItem"
+                   template="Syedzaidi_FreeItem::freeitem.phtml" />
+        </referenceContainer>
+        <block class="Magento\Checkout\Block\Cart\Additional\Info" name="additional.product.info" template="Magento_Checkout::cart/additional/info.phtml"/>
+    </body>
+</page>
